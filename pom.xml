@@ -63,4 +63,19 @@
 			<version>5.9.2</version>
 		</dependency>
 	</dependencies>
+	 <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <!-- Point to your Cucumber Test Runner class -->
+                    <includes>
+                        <include>**/ExpInsRunner.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
